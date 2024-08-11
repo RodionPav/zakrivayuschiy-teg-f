@@ -6,8 +6,8 @@
 */
 
 :root.theme-light {
-  --font-accent-title-light: 700;
-  --font-accent-text-light: 400;
+  --font-weight-main: 700;
+  --font-weight-additional: 400;
   --accent-color: #000000;
   --bg-color: #ffffff;
   --label-color: #898989;
@@ -25,8 +25,8 @@
 }
 
 :root.theme-dark {
-  --font-accent-title: 785;
-  --font-accent-text: 465;
+  --font-weight-main: 785;
+  --font-weight-additional: 465;
   --accent-color: #00cc14;
   --bg-color: #000000;
   --label-color: rgb(0, 204, 20);

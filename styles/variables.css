@@ -1,11 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-font: "PressStarr2P", "Arial", sans-serif;
-  --acent-font: "Inter", "Arial", sans-serif;
+  --main-font: "Inter";
+  --acent-font: "PressStarr2P";
   --text-transform-up: uppercase;
-  --font-accent-title-light: 700;
-  --font-accent-text-light: 400;
+  --font-weight-light: 400;
   --accent-color: #000000;
   --bg-color: #ffffff;
   --label-color: #898989;

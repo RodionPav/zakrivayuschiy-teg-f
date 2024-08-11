@@ -1,18 +1,17 @@
 .button {
   border: none;
   font-size: 14px;
-
   line-height: 12.6px;
   background: var(--bg-color);
   color: var(--accent-color);
   cursor: pointer;
+  font-family: var(--acent-font), sans-serif;
 }
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
-  font-variation-settings: "wdth" var(--font-accent-text-light);
+  font-family: var(--main-font, sans-serif);
   background-color: var(--bg-color);
   background-image: var(--background-image);
   background-position: top center;
@@ -20,6 +19,15 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--main-font), sans-serif;
+    font-variation-settings: "wdth" var(--font-weight-main),
+      "wdth" var(--font-weight-additional);
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -30,6 +38,7 @@
   margin: 100px auto;
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
+  font-family: var(--acent-font), sans-serif;
 }
 
 .header__title {
@@ -47,13 +56,9 @@
   text-transform: var(--text-transform-up);
 }
 
-.theme-menu {
-}
-
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 12px;
   padding-bottom: 15px;
 }
@@ -119,7 +124,6 @@
 .card__title {
   background-color: var(--bg-color);
   color: var(--accent-color);
-  font-family: var(--acent-font);
   padding: 3px 0 3px 10px;
   font-size: 18px;
   font-weight: 700;
@@ -154,7 +158,7 @@
 }
 
 .card__picture-img {
-  /* mix-blend-mode: hard-light; */
+  mix-blend-mode: hard-light;
   width: 100%;
   height: 696px;
 }
@@ -169,7 +173,6 @@
 
 .card__discription-text {
   padding-bottom: 27px;
-  font-family: var(--acent-font);
   font-size: 18px;
 
   line-height: 21px;
@@ -349,6 +352,7 @@
   transition: opacity 0.5s ease-in-out;
   margin: auto;
   text-transform: var(--text-transform-up);
+  font-family: var(--acent-font), sans-serif;
 }
 
 dialog:not([open]) {
@@ -431,9 +435,6 @@ dialog::backdrop {
     height: 371px;
   }
 
-  .save-button {
-    width: 100%;
-  }
   .button__text {
     width: auto;
   }
