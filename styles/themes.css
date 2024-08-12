@@ -24,6 +24,27 @@
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --font-weight-main: 700;
+    --font-weight-additional: 400;
+    --accent-color: #000000;
+    --bg-color: #ffffff;
+    --label-color: #898989;
+    --theme-button: rgba(0, 0, 0, 0.6);
+    --button-color: #ffffff;
+    --contur-color: #000000;
+    --filling-color: red;
+    --background-image: repeating-linear-gradient(
+        to left,
+        #d3d3d3 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
+      linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  }
+}
+
 :root.theme-dark {
   --font-weight-main: 785;
   --font-weight-additional: 465;
@@ -43,7 +64,7 @@
     linear-gradient(#007f0c 0.01%, #004306);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root.theme-auto {
     --font-accent-title: 785;
     --font-accent-text: 465;

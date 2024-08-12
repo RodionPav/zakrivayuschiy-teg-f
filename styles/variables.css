@@ -3,8 +3,8 @@
 :root {
   --main-font: "Inter";
   --acent-font: "PressStarr2P";
-  --text-transform-up: uppercase;
-  --font-weight-light: 400;
+  --font-weight-main: 700;
+  --font-weight-additional: 400;
   --accent-color: #000000;
   --bg-color: #ffffff;
   --label-color: #898989;

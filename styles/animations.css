@@ -14,10 +14,10 @@
 */
 @keyframes loading {
   from {
-    left: -12px;
+    left: -20px;
   }
   to {
-    left: -16px;
+    left: -24px;
   }
 }
 
