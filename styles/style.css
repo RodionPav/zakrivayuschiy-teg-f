@@ -24,15 +24,14 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  overflow-x: hidden;
-  inline-size: clamp(375px, 70vi, 700px);
+  inline-size: clamp(355px, 70vi, 700px);
 }
 
 @supports (font-variation-settings: normal) {
   .page {
     font-family: var(--main-font), sans-serif;
-    font-variation-settings: var(--font-weight-additional),
-      var(--font-weight-additional);
+    font-variation-settings: var(--font-weight-main),
+      var(--font-weight-additional), "opsz" 0;
   }
 }
 
@@ -65,10 +64,8 @@
 
 .theme-menu {
   display: flex;
-  width: 84px;
-  height: 70px;
   margin: 3px 0px 27px 0px;
-  padding-left: 8px;
+  padding-left: 18px;
 }
 
 .theme-menu__list {
@@ -141,6 +138,7 @@
   line-height: 21.78px;
   text-align: left;
   background-color: var(--bg-color);
+  font-variation-settings: "wght" var(--font-weight-main);
 }
 
 .card__picture-wrapper {
@@ -151,6 +149,8 @@
 }
 
 .card__picture-lable {
+  color: var(--accent-color);
+  mix-blend-mode: hard-light;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -170,7 +170,6 @@
 }
 
 .card__picture-img {
-  mix-blend-mode: hard-light;
   width: 100%;
   height: inherit;
   max-height: 696px;
@@ -186,13 +185,13 @@
   padding: 26px 25px 25px 25px;
   color: var(--accent-color);
   background-color: var(--bg-color);
-  font-weight: var(--font-weight-additional);
 }
 
 .card__discription-text {
   padding-bottom: 27px;
   font-size: 18px;
   line-height: 21px;
+  font-variation-settings: "wght" var(--font-weight-additional);
 }
 
 .card__discription-controls {
@@ -274,17 +273,13 @@
   fill: var(--filling-color);
 }
 
-.save-button:focus-visible,
-.dialog__button:focus-visible,
-.card__like-button:focus-visible {
+.button__interactive:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-color);
   outline: none;
   transition: box-shadow 0.3s;
 }
 
-.save-button::before,
-.dialog__button::before,
-.card__like-button::before {
+.button__interactive::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -296,9 +291,7 @@
   transition: width 0.5s ease-in-out;
 }
 
-.save-button:hover::before,
-.dialog__button:hover::before,
-.card__like-button:hover::before {
+.button__interactive:hover::before {
   width: 100%;
   transform: scale(1);
 }
@@ -308,7 +301,7 @@
   width: 130px;
   height: 38px;
   border: 2px solid var(--accent-color);
-  padding: 0;
+  padding: 11px 35px;
 }
 
 .button__text {
@@ -320,23 +313,28 @@
   mix-blend-mode: difference;
 }
 
-.floppy-image {
-  z-index: 1;
-  fill: var(--button-color);
-  color: var(--button-color);
-  mix-blend-mode: difference;
-}
-
 .save-button {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  width: clamp(306px, 335px, 400px);
-  margin: 0 auto 103px auto;
+  max-width: 335px;
+  margin: 55px auto 103px auto;
   outline: 2px solid var(--accent-color);
-  padding: 19px 15px;
+  padding: 15px 20px;
+}
+
+.save__floppy-image {
+  height: 21px;
+  width: 21px;
+}
+
+.floppy-image {
+  z-index: 1;
+  fill: var(--button-color);
+  color: var(--button-color);
+  mix-blend-mode: difference;
 }
 
 .dialog {
@@ -365,11 +363,15 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   gap: 20px;
+  padding-bottom: 30px;
 }
 
 .dialog__text {
-  width: clamp(195px, 230px, 300px);
+  font-size: 14px;
+  font-weight: 400;
   line-height: 21px;
+  text-align: left;
+  max-width: 198px;
 }
 
 .dialog__button {
@@ -377,8 +379,12 @@ dialog::backdrop {
   position: relative;
   z-index: 1;
   height: 38px;
-  margin-top: 30px;
   border: 2px solid var(--accent-color);
+}
+
+.dialog-floppy-image {
+  width: 39px;
+  height: 39px;
 }
 
 .filter-mix {
@@ -414,6 +420,10 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+  .page {
+    inline-size: 100%;
+  }
+
   .header__title {
     padding-top: 120px;
     font-size: 49px;
@@ -428,6 +438,10 @@ dialog::backdrop {
     height: 371px;
   }
 
+  .card__picture-lable {
+    right: 13px;
+  }
+
   .button__text {
     width: auto;
   }
@@ -436,14 +450,18 @@ dialog::backdrop {
     padding-right: 20px;
   }
 
-  .floppy-image {
-    width: 28px;
-    height: 28px;
+  .save-button {
+    margin-top: 50px;
+    flex-direction: column;
+    width: 82%;
+    gap: 12px;
   }
 
-  .save-button {
-    flex-direction: column;
-    width: 80%;
-    gap: 8px;
+  .save__floppy-image {
+    height: 28px;
+    width: 28px;
+  }
+
+  .dialog {
   }
 }

@@ -46,7 +46,9 @@
               type="button"
               data-theme="light"
               class="button theme-menu__button"
-            >Светло</button>
+            >
+              Светло
+            </button>
           </li>
         </ul>
       </nav>
@@ -170,7 +172,10 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button button button__interactive">
+            <button
+              type="button"
+              class="card__like-button button button__interactive"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -229,7 +234,10 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button button button__interactive">
+            <button
+              type="button"
+              class="card__like-button button button__interactive"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -240,7 +248,7 @@
         <div class="card__picture-wrapper">
           <p class="card__picture-lable">&lt;desigions&gt;</p>
           <img
-            src="./images/desert rocks.jpg"
+            src="./images/desert-rocks.jpg"
             alt="Пустынные скалы"
             class="card__picture-img filter-grayscale"
           />
@@ -290,7 +298,10 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button button button__interactive">
+            <button
+              type="button"
+              class="card__like-button button button__interactive"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -352,7 +363,10 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button button button__interactive">
+            <button
+              type="button"
+              class="card__like-button button button__interactive"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -411,7 +425,10 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button button button__interactive">
+            <button
+              type="button"
+              class="card__like-button button button__interactive"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -472,7 +489,10 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button button button__interactive">
+            <button
+              type="button"
+              class="card__like-button button button__interactive"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -498,7 +518,8 @@
             и есть результат.
           </p>
           <p class="card__discription-text">
-            Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.
+            Место, чтобы остановиться, подумать и написать, что вы чувствуете в
+            этой точке пути.
           </p>
           <div class="card__discription-controls">
             <button class="button card__icon-button" type="button">
@@ -542,14 +563,14 @@
             </button>
           </div>
         </div>
-      </article> 
+      </article>
       <button
         class="save-button button button__interactive"
         aria-controls="dialog-id"
         onclick="window['dialog-id'].showModal()"
         type="button"
       >
-        <svg class="floppy-image" viewBox="0 0 21 21" width="21" height="21">
+        <svg class="floppy-image save__floppy-image" viewBox="0 0 21 21">
           <use href="svg/floppy.svg#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
@@ -557,12 +578,11 @@
     </main>
     <dialog class="dialog" id="dialog-id">
       <div class="dialog-wrapper">
-        <svg class="floppy-image" fill="currentColor" viewBox="0 0 21 21" width="39" height="39">
+        <svg class="floppy-image dialog-floppy-image" viewBox="0 0 21 21">
           <use href="svg/floppy.svg#floppy" />
         </svg>
         <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
-
       <button
         class="button dialog__button button__interactive"
         type="button"

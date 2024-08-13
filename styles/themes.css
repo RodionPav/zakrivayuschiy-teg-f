@@ -10,7 +10,7 @@
   --font-weight-additional: 400;
   --accent-color: #000000;
   --bg-color: #ffffff;
-  --label-color: #898989;
+  --label-color: #FFFFFF;
   --theme-button: rgba(0, 0, 0, 0.6);
   --button-color: #ffffff;
   --contur-color: #000000;
@@ -30,7 +30,7 @@
     --font-weight-additional: 400;
     --accent-color: #000000;
     --bg-color: #ffffff;
-    --label-color: #898989;
+    --label-color: #FFFFFF;
     --theme-button: rgba(0, 0, 0, 0.6);
     --button-color: #ffffff;
     --contur-color: #000000;
@@ -50,9 +50,10 @@
   --font-weight-additional: 465;
   --accent-color: #00cc14;
   --bg-color: #000000;
-  --label-color: rgb(0, 204, 20);
+  --label-color: #00cc14;
   --theme-button: rgba(0, 204, 20, 0.6);
-  --button-color: #00cc14;
+  --button-color: #00CC14;
+
   --contur-color: #00cc14;
   --filling-color: red;
   --background-image: repeating-linear-gradient(
@@ -70,7 +71,7 @@
     --font-accent-text: 465;
     --accent-color: #00cc14;
     --bg-color: #000000;
-    --label-color: rgb(0, 204, 20);
+    --label-color: #00CC14;
     --theme-button: rgba(0, 204, 20, 0.6);
     --button-color: #00cc14;
     --contur-color: #00cc14;
