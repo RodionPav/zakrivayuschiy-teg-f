@@ -290,14 +290,13 @@
   fill: var(--filling-color);
 }
 
-.button__interactive{
+.button__interactive {
   transition: box-shadow 0.3s;
 }
 
 .button__interactive:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-color);
   outline: none;
-
 }
 
 .button__interactive::before {
